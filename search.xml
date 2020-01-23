@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>读研感想</title>
+    <url>/2020/01/23/%E8%AF%BB%E7%A0%94%E6%84%9F%E6%83%B3/</url>
+    <content><![CDATA[<p><em>xietiweiben</em><br><em>xietiwenben</em><br><u>带下划线文本</u></p>
+<a id="more"></a>
+<p>创建脚注格式类似这样 [^RUNOOB][^222]</p>
+<p>[^RUNOOB]: 菜鸟教程 – 学的不仅是技术，更是梦想！！！<br>[^222]:2222</p>
+<ol>
+<li>diyixiang：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>dierxiang：<ul>
+<li>第二项嵌套的第一个元素</li>
+</ul>
+</li>
+<li>disanxiang：<ul>
+<li>第三项嵌套的第一个元素</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>区块引用<br>菜鸟教程<br>学的不仅是技术更是梦想</p>
+</blockquote>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一次嵌套</p>
+<blockquote>
+<p>第二次嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>第一项</p>
+<blockquote>
+<p>菜鸟教程<br>学的不仅是技术更是梦想</p>
+</blockquote>
+</li>
+<li><p>第二项</p>
+<blockquote>
+<p><code>System.out.println()</code>方法</p>
+</blockquote>
+<blockquote>
+<p>代码如下</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">$(document).ready(function () &#123;</span><br><span class="line">alert(<span class="string">'RUNOOB'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>第三项</p>
+<blockquote>
+<p>非常推荐去<a href="https://www.leetcode.com" target="_blank" rel="noopener">leetcode</a>上刷题<br>  这是一个链接<a href="https://www.runoob.com" target="_blank" rel="noopener">https://www.runoob.com</a></p>
+</blockquote>
+<blockquote>
+<p>链接也可以用变量代替，文档末尾附带变量地址:<br>  这个链接用1作为网址变量[Google][1]<br>  这个链接用 runoob 作为网址变量 [Runoob][runoob]<br>  然后在文档的结尾为变量赋值（网址）</p>
+</blockquote>
+</li>
+</ul>
+<pre><code>[1]: http://www.google.com/
+[runoob]: http://www.runoob.com/</code></pre>]]></content>
+      <categories>
+        <category>心路历程</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+</search>
