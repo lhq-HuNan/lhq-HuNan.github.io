@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>读研感想</title>
-    <url>/2020/01/23/%E8%AF%BB%E7%A0%94%E6%84%9F%E6%83%B3/</url>
+    <title>MarkDown学习</title>
+    <url>/2020/01/23/Markdown%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p><em>xietiweiben</em><br><em>xietiwenben</em><br><u>带下划线文本</u></p>
 <a id="more"></a>
 <p>创建脚注格式类似这样 [^RUNOOB][^222]</p>
@@ -61,11 +61,11 @@
 <pre><code>[1]: http://www.google.com/
 [runoob]: http://www.runoob.com/</code></pre>]]></content>
       <categories>
-        <category>心路历程</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>导航</tag>
-        <tag>分享</tag>
+        <tag>Coding</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
 </search>
