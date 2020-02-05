@@ -89,14 +89,14 @@
 
 
 
-<meta name="description" content="Springboot集成Rabbitmq1.基于Spring-Rabbit操作Rabbitmq 使用spring-boot-starter-amqp会自动添加spring-rabbit依赖代码如下：    123456789101112&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;    &amp;">
+<meta name="description" content="关于启动springboot工程后mongodb报错： 这个问题是比较简单和ruozhi的..检查工程下的resources目录里的application.yml中mongodb的配置其中uri是否写错格式如下：  1234data:  mongodb:    uri: mongodb:&#x2F;&#x2F;root:root@localhost:27017    database: userInformation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rabbitmq学习">
-<meta property="og:url" content="http://liuhaoqi.com/2020/01/31/rabbitmq%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="mongodb错误1">
+<meta property="og:url" content="http://liuhaoqi.com/2020/02/05/mongodb%E9%94%99%E8%AF%AF1/index.html">
 <meta property="og:site_name" content="Liu HaoQi&#39;s Blog">
-<meta property="og:description" content="Springboot集成Rabbitmq1.基于Spring-Rabbit操作Rabbitmq 使用spring-boot-starter-amqp会自动添加spring-rabbit依赖代码如下：    123456789101112&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;    &amp;">
-<meta property="article:published_time" content="2020-01-31T10:14:12.000Z">
-<meta property="article:modified_time" content="2020-01-31T10:21:45.545Z">
+<meta property="og:description" content="关于启动springboot工程后mongodb报错： 这个问题是比较简单和ruozhi的..检查工程下的resources目录里的application.yml中mongodb的配置其中uri是否写错格式如下：  1234data:  mongodb:    uri: mongodb:&#x2F;&#x2F;root:root@localhost:27017    database: userInformation">
+<meta property="article:published_time" content="2020-02-05T09:17:39.000Z">
+<meta property="article:modified_time" content="2020-02-05T09:18:11.056Z">
 <meta property="article:author" content="Liu HaoQi">
 <meta property="article:tag" content="Coding">
 <meta property="article:tag" content="学习">
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://liuhaoqi.com/2020/01/31/rabbitmq学习/"/>
+  <link rel="canonical" href="http://liuhaoqi.com/2020/02/05/mongodb错误1/"/>
 
 
 
 
 
-  <title>rabbitmq学习 | Liu HaoQi's Blog</title>
+  <title>mongodb错误1 | Liu HaoQi's Blog</title>
   
 
 
@@ -313,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://liuhaoqi.com/2020/01/31/rabbitmq%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://liuhaoqi.com/2020/02/05/mongodb%E9%94%99%E8%AF%AF1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu HaoQi">
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">rabbitmq学习</h1>
+          <h1 class="post-title" itemprop="name headline">mongodb错误1</h1>
         
 
         <div class="post-meta">
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-31T18:14:12+08:00">
-                2020-01-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-05T17:17:39+08:00">
+                2020-02-05
               </time>
             
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  445
+                  300
                 </span>
               
 
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -438,34 +438,11 @@
       
 
       
-        <h1 id="Springboot集成Rabbitmq"><a href="#Springboot集成Rabbitmq" class="headerlink" title="Springboot集成Rabbitmq"></a>Springboot集成Rabbitmq</h1><h2 id="1-基于Spring-Rabbit操作Rabbitmq"><a href="#1-基于Spring-Rabbit操作Rabbitmq" class="headerlink" title="1.基于Spring-Rabbit操作Rabbitmq"></a>1.基于Spring-Rabbit操作Rabbitmq</h2><blockquote>
-<p>使用spring-boot-starter-amqp会自动添加spring-rabbit依赖<br>代码如下：</p>
-<blockquote>
+        <h2 id="关于启动springboot工程后mongodb报错："><a href="#关于启动springboot工程后mongodb报错：" class="headerlink" title="关于启动springboot工程后mongodb报错："></a>关于启动springboot工程后mongodb报错：</h2><blockquote>
+<p>这个问题是比较简单和ruozhi的..检查工程下的resources目录里的application.yml中mongodb的配置<br>其中uri是否写错<br>格式如下：</p>
 </blockquote>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring‐boot‐starter‐amqp&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring‐boot‐starter‐test&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring‐boot‐starter‐logging&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h1><h2 id="1-配置application-yml文件"><a href="#1-配置application-yml文件" class="headerlink" title="1.配置application.yml文件"></a>1.配置application.yml文件</h2><blockquote>
-<p>连接rabbitmq</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">port: <span class="number">44000</span></span><br><span class="line">spring:</span><br><span class="line">application:</span><br><span class="line">name: test‐rabbitmq‐producer</span><br><span class="line">rabbitmq:</span><br><span class="line">host: <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">port: <span class="number">5672</span></span><br><span class="line">username: guest</span><br><span class="line">password: guest</span><br><span class="line">virtualHost: /</span><br></pre></td></tr></table></figure>
-<h2 id="2-定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。"><a href="#2-定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。" class="headerlink" title="2.定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。"></a>2.定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。</h2><blockquote>
-<p>以配置topics交换机为例</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//队列名称</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String QUEUE_INFORM_EMAIL = <span class="string">"queue_inform_email"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String QUEUE_INFORM_SMS = <span class="string">"queue_inform_sms"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String EXCHANGE_TOPICS_INFORM=<span class="string">"exchange_topics_inform"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ROUTINGKEY_EMAIL=<span class="string">"inform.#.email.#"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String ROUTINGKEY_SMS=<span class="string">"inform.#.sms.#"</span>;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//声明交换机</span></span><br><span class="line">    <span class="meta">@Bean</span>(EXCHANGE_TOPICS_INFORM)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Exchange <span class="title">EXCHANGE_TOPICS_INFORM</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//durable(true)持久化，消息队列重启后交换机仍然存在</span></span><br><span class="line">        <span class="keyword">return</span> ExchangeBuilder.topicExchange(EXCHANGE_TOPICS_INFORM).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//声明队列</span></span><br><span class="line">    <span class="meta">@Bean</span>(QUEUE_INFORM_EMAIL)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Queue <span class="title">QUEUE_INFORM_EMAIL</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Queue(QUEUE_INFORM_EMAIL);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Bean</span>(QUEUE_INFORM_SMS)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Queue <span class="title">QUEUE_INFORM_SMS</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Queue(QUEUE_INFORM_SMS);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//绑定交换机和队列</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Binding <span class="title">BINGDING_QUEUE_INFORM_EMAIL</span><span class="params">(@Qualifier(QUEUE_INFORM_EMAIL)</span> Queue queue,</span></span><br><span class="line"><span class="function">                                               @<span class="title">Qualifier</span><span class="params">(EXCHANGE_TOPICS_INFORM)</span> Exchange exchange) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> BindingBuilder.bind(queue).to(exchange).with(ROUTINGKEY_EMAIL).noargs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Binding <span class="title">BINGDING_QUEUE_INFORM_SMS</span><span class="params">(@Qualifier(QUEUE_INFORM_EMAIL)</span> Queue queue,</span></span><br><span class="line"><span class="function">                                               @<span class="title">Qualifier</span><span class="params">(EXCHANGE_TOPICS_INFORM)</span> Exchange exchange) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> BindingBuilder.bind(queue).to(exchange).with(ROUTINGKEY_SMS).noargs();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-SpringBootTest单元测试"><a href="#3-SpringBootTest单元测试" class="headerlink" title="3.SpringBootTest单元测试"></a>3.SpringBootTest单元测试</h2><blockquote>
-<p>代码如下</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">Producer04_topics_springboot</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    RabbitTemplate rabbitTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用RabbitTemplate来发送消息</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSendEmail</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String message=<span class="string">"send email to user"</span>;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 参数：</span></span><br><span class="line"><span class="comment">         * 1.交换机名称</span></span><br><span class="line"><span class="comment">         * 2.routingkey</span></span><br><span class="line"><span class="comment">         * 3.消息内容</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_TOPICS_INFORM,<span class="string">"inform.email"</span>,message);</span><br><span class="line">        System.out.println(<span class="string">"Send Message is:'"</span> +message+<span class="string">"'"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><blockquote>
-<p>因为之前已经开启并且持久化了一个相同名字的交换机“exchange_topics_inform”，springboot启动就报了io异常</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(Ra</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>解决办法是登录到rabbitmq中把该交换机删掉就行了。</p>
-</blockquote>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data:</span><br><span class="line">  mongodb:</span><br><span class="line">    uri: mongodb:<span class="comment">//root:root@localhost:27017</span></span><br><span class="line">    database: userInformation</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">com.mongodb.MongoSecurityException: Exception authenticating MongoCredential&#123;mechanism=<span class="keyword">null</span>, userName=<span class="string">'root'</span>, source=<span class="string">'admin'</span>, password=&lt;hidden&gt;, mechanismProperties=&#123;&#125;&#125;</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.wrapException(SaslAuthenticator.java:<span class="number">162</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.access$<span class="number">200</span>(SaslAuthenticator.java:<span class="number">39</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator$<span class="number">1</span>.run(SaslAuthenticator.java:<span class="number">68</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator$<span class="number">1</span>.run(SaslAuthenticator.java:<span class="number">46</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:<span class="number">168</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:<span class="number">46</span>)</span><br><span class="line">	at com.mongodb.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:<span class="number">32</span>)</span><br><span class="line">	at com.mongodb.connection.InternalStreamConnectionInitializer.authenticateAll(InternalStreamConnectionInitializer.java:<span class="number">122</span>)</span><br><span class="line">	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:<span class="number">52</span>)</span><br><span class="line">	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:<span class="number">127</span>)</span><br><span class="line">	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:<span class="number">114</span>)</span><br><span class="line">	at java.lang.Thread.run(Thread.java:<span class="number">745</span>)</span><br><span class="line">Caused by: com.mongodb.MongoCommandException: Command failed with error <span class="number">18</span>: <span class="string">'Authentication failed.'</span> on server localhost:<span class="number">27017</span>. The full response is &#123; <span class="string">"ok"</span> : <span class="number">0.0</span>, <span class="string">"errmsg"</span> : <span class="string">"Authentication failed."</span>, <span class="string">"code"</span> : <span class="number">18</span>, <span class="string">"codeName"</span> : <span class="string">"AuthenticationFailed"</span> &#125;</span><br><span class="line">	at com.mongodb.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:<span class="number">164</span>)</span><br><span class="line">	at com.mongodb.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:<span class="number">295</span>)</span><br><span class="line">	at com.mongodb.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:<span class="number">255</span>)</span><br><span class="line">	at com.mongodb.connection.CommandHelper.sendAndReceive(CommandHelper.java:<span class="number">84</span>)</span><br><span class="line">	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:<span class="number">34</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:<span class="number">123</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator.access$<span class="number">100</span>(SaslAuthenticator.java:<span class="number">39</span>)</span><br><span class="line">	at com.mongodb.connection.SaslAuthenticator$<span class="number">1</span>.run(SaslAuthenticator.java:<span class="number">65</span>)</span><br><span class="line">	... <span class="number">9</span> common frames omitted</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -497,8 +474,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/23/Markdown%E5%AD%A6%E4%B9%A0/" rel="next" title="MarkDown学习">
-                <i class="fa fa-chevron-left"></i> MarkDown学习
+              <a href="/2020/01/31/rabbitmq%E5%AD%A6%E4%B9%A0/" rel="next" title="rabbitmq学习">
+                <i class="fa fa-chevron-left"></i> rabbitmq学习
               </a>
             
           </div>
@@ -506,10 +483,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/05/mongodb%E9%94%99%E8%AF%AF1/" rel="prev" title="mongodb错误1">
-                mongodb错误1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -731,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Springboot集成Rabbitmq"><span class="nav-number">1.</span> <span class="nav-text">Springboot集成Rabbitmq</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基于Spring-Rabbit操作Rabbitmq"><span class="nav-number">1.1.</span> <span class="nav-text">1.基于Spring-Rabbit操作Rabbitmq</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-配置"><span class="nav-number">2.</span> <span class="nav-text">2.配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-配置application-yml文件"><span class="nav-number">2.1.</span> <span class="nav-text">1.配置application.yml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。"><span class="nav-number">2.2.</span> <span class="nav-text">2.定义RabbitConfig类，配置Exchange、Queue、及绑定交换机。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SpringBootTest单元测试"><span class="nav-number">2.3.</span> <span class="nav-text">3.SpringBootTest单元测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-number">2.4.</span> <span class="nav-text">报错</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于启动springboot工程后mongodb报错："><span class="nav-number">1.</span> <span class="nav-text">关于启动springboot工程后mongodb报错：</span></a></li></ol></div>
             
 
           </div>
