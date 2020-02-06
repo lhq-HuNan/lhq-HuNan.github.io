@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>mysql本地数据库忘记密码</title>
+    <url>/2020/02/06/mysql%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81/</url>
+    <content><![CDATA[<blockquote>
+<p>转载自 <a href="https://www.cnblogs.com/liusx0303/p/10093050.html" target="_blank" rel="noopener">https://www.cnblogs.com/liusx0303/p/10093050.html</a> </p>
+</blockquote>
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="font-size: 18px;"><strong>忘记本地</strong><strong>MySQL</strong><strong>数据库密码，解决方案，分以下10个步骤：</strong></span></p>
+<p><span style="font-size: 18px;"><strong>参考链接：</strong></span></p>
+<p><span style="font-size: 18px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://blog.csdn.net/weidong_y/article/details/80493743" target="_blank" rel="noopener">https://blog.csdn.net/weidong_y/article/details/80493743</a>；</strong></span></p>
+<p><span style="font-size: 18px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="https://blog.csdn.net/anzhen0429/article/details/78296814" target="_blank">https://blog.csdn.net/anzhen0429/article/details/78296814</a>；</strong></span></p>
+<p><span style="font-size: 18px;"><strong>数据库版本：5.7.21</strong></span></p>
+<p><span style="font-size: 18px;"><strong>平台：win7</strong></span></p>
+<p><span style="font-size: 18px;">1、打开cmd窗口，进入 MySQL的安装目录。</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202139219-604518831.png" alt=""></span></p>
+<p><span style="font-size: 18px;">2、停止MySQL的服务。已经停止了。</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209201945650-1233468766.png" alt=""></span></p>
+<p><span style="font-size: 18px;"><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202005884-38622610.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>右键MySQL，看到启动是可点击的，证明MySQL服务已停止运行。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181210210258516-922455592.png" alt="" width="373" height="135"></p>
+<p><span style="font-size: 18px;">3.将root用户对数据库操作的的权限授予给别的用户。</span></p>
+<p><span style="font-size: 18px;">输入 mysqld --skip-grant-tables 回车</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202207262-1631259176.png" alt=""></span></p>
+<p><span style="font-size: 18px;">4、重新打开一个窗口，进入bin目录，输入mysql，然后再输入use mysql，如下图所示：</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202713401-1534270842.png" alt=""></span></p>
+<p><span style="font-size: 18px;">5、修改数据库连接密码，命令</span></p>
+<p><span style="font-size: 18px;">update user set password=password("123456") where user="root";</span></p>
+<p><span style="font-size: 18px;">注：这里的“123456”为设置的新密码。注意语句后面的“；”，别漏。</span><span style="font-size: 18px;">如果不写“；”，回车之后输入“\g”，效果一样。</span></p>
+<p>&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202936895-2061466812.png" alt=""></p>
+<p><span style="font-size: 18px;">出现错误：</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202742967-247542111.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">正确的应该是：</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202802194-343682703.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">查找解决方案：说是mysql5.7以上没有password这个字段，变成了authentication_string，然后重新设置新密码成功。</span></p>
+<p><span style="font-size: 18px;">参考链接：<a href="https://www.techietown.info/2017/04/resolved-error-unknown-column-password-field-list/" target="_blank" rel="noopener">https://www.techietown.info/2017/04/resolved-error-unknown-column-password-field-list/</a></span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202833362-258363205.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">6、重新加载一下权限，将设置了密码的用户root的权限信息从内存中写入数据库。输入命令flush privileges;，英文分号“;”不可省略。如果不写“；”，回车之后输入“\g”，效果一样。</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202936895-2061466812.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">7、退出 mysql&nbsp;。输入quit。</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209202953871-727359773.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">8、修改 root 密码后，需要执行下面的语句和新修改的密码。另开一个cmd窗口，执行以下命令，然后提示输入密码：输入4中设置的密码。</span></p>
+<p><span style="font-size: 18px;">mysqladmin -u root -p shutdown</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209203013271-973362343.png" alt=""></span></p>
+<p><span style="font-size: 18px;">9、开启数据库服务。</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209203044415-1664265008.png" alt=""></span></p>
+<p><span style="font-size: 18px;"><img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209203112763-2066358991.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">10、验证是否设置成功。另开cmd，进入到mysql的bin目录下，输入mysql –u root –p，回车之后提示输入密码，然后显示如下。连接成功。</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2018.cnblogs.com/blog/1227454/201812/1227454-20181209203127141-658237518.png" alt=""></span></p>
+<p><span style="font-size: 18px;">心里最想说的话：折腾这么久，还是记住密码吧！！！</span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+<p align="left"><span style="font-size: 18px;">&nbsp;</span></p>
+<p><span style="font-size: 18px;"><strong>&nbsp;</strong></span></p>
+</div>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+  </entry>
+  <entry>
     <title>mongodb错误1</title>
     <url>/2020/02/05/mongodb%E9%94%99%E8%AF%AF1/</url>
     <content><![CDATA[<h2 id="关于启动springboot工程后mongodb报错："><a href="#关于启动springboot工程后mongodb报错：" class="headerlink" title="关于启动springboot工程后mongodb报错："></a>关于启动springboot工程后mongodb报错：</h2><blockquote>
